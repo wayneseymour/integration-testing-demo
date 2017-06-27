@@ -4,12 +4,23 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
+import {TodosComponent} from "./2-todos/todos.component";
+import {UserDetailsComponent} from "./3-user-details/user-details.component";
+import {VoterComponent} from "./1-voter/voter.component";
+import {UsersComponent} from "./users/users.component";
+import {RouterModule} from "@angular/router";
+import {routes} from "./app.routes";
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    TodosComponent,
+    UserDetailsComponent,
+    VoterComponent,
+    UsersComponent,
   ],
   imports: [
+    RouterModule.forRoot(routes),
     BrowserModule,
     FormsModule,
     HttpModule
