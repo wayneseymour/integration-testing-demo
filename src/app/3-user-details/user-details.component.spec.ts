@@ -57,6 +57,7 @@ describe('UserDetailsComponent', () => {
   
     let route: ActivatedRouteStub = TestBed.get(ActivatedRoute);
     route.push({id: 0});
-    expect(spy).toHaveBeenCalledWith(['not-found']);
+    // expect(spy).toHaveBeenCalledWith(['not-found']);
+    expect(spy).toHaveBeenCalledWith(['not-fouasdfasdfsadfasdfasnd']);
   });
 });
