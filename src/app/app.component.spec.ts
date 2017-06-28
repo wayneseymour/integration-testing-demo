@@ -3,6 +3,7 @@ import { AppComponent } from './app.component';
 import {RouterLinkWithHref, RouterOutlet} from "@angular/router";
 import {By} from "@angular/platform-browser";
 import {RouterTestingModule} from "@angular/router/testing";
+import {NO_ERRORS_SCHEMA} from "@angular/core";
 
 describe('AppComponent', () => {
   let fixture;
@@ -12,6 +13,7 @@ describe('AppComponent', () => {
       declarations: [
         AppComponent,
       ],
+      schemas: [ NO_ERRORS_SCHEMA ],
     });
     TestBed.compileComponents();
   
@@ -38,13 +40,5 @@ describe('AppComponent', () => {
     const de = fixture.debugElement.query(By.directive(RouterOutlet));
     expect(de).not.toBeNull();
   });
-  
-  it('should have a link to the todos page', () => {
-    fixture.detectChanges();
-    let debugElements = fixture
-      .debugElement
-      .queryAll(By.directive(RouterLinkWithHref));
-    let index = debugElements.findIndex(de => de.properties['href'] === '/todos');
-    expect(index).toBeGreaterThan(-1);
-  });
+
 });

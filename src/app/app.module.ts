@@ -10,6 +10,7 @@ import {VoterComponent} from "./1-voter/voter.component";
 import {UsersComponent} from "./users/users.component";
 import {RouterModule} from "@angular/router";
 import {routes} from "./app.routes";
+import { NavComponent } from './nav/nav.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import {routes} from "./app.routes";
     UserDetailsComponent,
     VoterComponent,
     UsersComponent,
+    NavComponent,
   ],
   imports: [
     RouterModule.forRoot(routes),
